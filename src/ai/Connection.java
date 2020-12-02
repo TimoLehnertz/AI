@@ -42,12 +42,12 @@ public class Connection {
 
 	/**
 	 * mutate the connections strength by amount x
-	 * having strength of 0.5 and plaieing mutate 0.5 means having a chance to get a strength between 0 and 1 before sigmoid gets aplied
+	 * having strength of 0.5 and plaieing mutate 0.5 means having a chance to get a strength between 0 and 1
 	 * @param amount
 	 */
 	public void mutate(double amount) {
 		double delta = (Math.random() * (amount * 2)) - amount;
-		strength = Utils.sigmoid(strength + delta);
+		strength = strength + delta;
 	}
 
 	/**
